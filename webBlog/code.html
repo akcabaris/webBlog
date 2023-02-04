@@ -1,0 +1,114 @@
+<head>
+    <title>BLOG KRİPTO
+
+    </title>
+    <link rel="stylesheet" href="stilCode.css">
+    <link rel="icon" type="image/x-icon" href="iconForTitle.png">
+</head>
+<!-- AngularJs kodum satır 93-108 arasındadır. -->
+<body>
+    
+    <div>
+        <h1 id="buyukBaslik">BLOG KRİPTO</h1>
+    </div>
+    
+    <div>
+        <button class="button buttonAnasayfa" onclick="anaSayfaGoster();">Anasayfa</button>
+        <button class="button buttonHaberler" onclick="haberlerGoster();">Haberler</button>
+        <button class="button buttonSozluk" onclick="sozlukGoster();">Sözlük</button>
+        <button class="button buttonForum" onclick="forumGoster();">Forum</button>
+        <button class="button buttonHesaplama" onclick="hesapGoster();">Kar-Zarar</button>
+
+    </div>
+    <div id="anaSayfaDiv">
+        <h1 id="baslik1">Blockchain Nedir?</h1>
+        <p id="paragraf1">
+            Blockchain, yani Blok Zinciri, bloklardan oluşan zincir yapıyı tanımlıyor.<br>
+            Blockchain, dağınık yapıda birveritabanı sistemi olarak şifrelenmiş işlemlerin takibini sağlar.<br>
+            Blockchain, iş ağında yer alan işlemlerinkaydedilmesi ve varlıkların takip edilmesi gibi<br>
+            süreçleri kolaylaştırmaktadır.Aynı zamanda bu sistem,<br>
+            paylaşılabilen ve üzerinde değişiklik yapılamayan bir defter olarak da düşünülebilir.<br>
+        </p>
+
+        <h1 id="baslik2">Blokchain Teknolojisi Ne İşe Yarar?</h2>
+            <p id="paragraf2">
+                Blockchain teknolojisi, bünyesindeki bilgileri güvenle saklama özelliği ile veri <br>
+                gizliliği sunmaktadır. Burada yer alan verileri değiştirmek için ise diğer bloklardan onay almanız <br>
+                gereklidir. Bu da, blok sayısı kadar onay mekanizmasını devreye sokmaktadır. Böylece sistem, dışarıdan
+                <br>
+                gelebilecek iyi ya da kötü niyetli bir aksiyonun önüne geçerek verinin güvende olmasını sağlar. <br>
+            </p>
+
+            <h1 id="baslik3">Bitcoin Nedir</h1>
+
+            <p id="paragraf3">
+                Satoshi Nakamato adlı kişi ya da kişiler tarafından uçtan uca elektronik ödeme <br>
+                sistemi olan Bitcoin'e dair teknik yazı (Whitepaper) yayınladı. Teknik makale ile merkeziyetsiz ve
+                şeffaf
+                <br>
+                bir yapıya sahip olan Bitcoin kripto para birimi olarak ortaya çıktı. Bitcoin blok zinciri Ocak 2009
+                <br>
+                tarihinde yapılan ilk transfer ile kullanılmaya başlanmış ve kısa sürede kazandığı popülarite ile "1.
+                nesil
+                <br>
+                blockchain" olarak adlandırılmıştır. <br>
+            </p>
+
+
+    </div id="haberlerDiv">
+    <h1 id="baslik4">Bitcoin'in altınla korelasyonu yükseliyor</h1>
+    <p id="paragraf4">
+        Bank of America, daha önce Bitcoin'i riskli varlık olarak gören yatırımcıların tekrar güvenli liman
+        olarak
+        <br>
+        değerlendirmeye başladığını belirtti. Kripto paranın altınla 40 günlük korelasyonu 0,50 seviyesine
+        çıktı.
+        <br>
+        Bank of America’ya göre, Bitcoin'in diğer emtialarla bağlantılı hareketleri, yatırımcıların kripto
+        parayı
+        <br>
+        bir riskli varlık olarak alıp satmasının ardından tekrar güvenli liman olarak görmeye başladığına işaret
+        <br>
+        ediyor.
+
+        En büyük kripto paranın altınla 40 günlük korelasyonu Ağustos ortasında sıfır seviyesinden 0,50’ye
+        yükseldi.
+        <br>
+        S&P 500 ile 0,69 ve Nasdaq 100 ile 0,72 olan korelasyonlar daha yüksek olsa da bu korelasyonlar
+        yataylaşarak
+        <br>
+        birkaç ay önce görülen rekor seviyelerin altında seyrediyor. BofA stratejistleri Alkesh Shah ve Andrew
+        Moss
+        <br>
+        bunu bazı şeylerin değişebileceğinin işareti olarak yorumluyorlar. <br>
+
+    </p>
+    <div>
+        <p id="icerikEklenecek">Yakında İçerik Eklenecek.</p>
+    </div>
+    <div id="forumDiv">
+
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+        <div id="karZararHesap" ng-app="myApp" ng-controller="myCtrl">
+            <p>Alış Fiyatı :   <input type="text" ng-model="alisFiyat" placeholder="Alis Fiyatini Giriniz" /></p>
+            <p>Satış Fiyatı : <input type="text" ng-model="satisFiyat" placeholder="Satis Fiyatini Giriniz"/></p>
+            <p>Miktar : <input type="text" ng-model="miktar" placeholder="Hesaplanacak Miktari Giriniz"/></p>
+            <br>Kar-Zarar Durumu: {{(satisFiyat-alisFiyat)*miktar}}</br>
+        </div>
+        <script>
+            var app = angular.module("myApp",[]);
+            app.controller("myCtrl", function($scope)
+            {
+                $scope.alisFiyat = "";
+                $scope.satisFiyat = "";
+                $scope.miktarFiyat = "";
+            });
+        </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+    <script src="script.js" type="text/javascript"></script>
+    <script src="scriptForHideAndShow.js" type="text/javascript"></script>
+
+</body>
